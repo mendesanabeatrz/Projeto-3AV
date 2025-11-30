@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(214, 118, 134);
+        }
+         h1 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        .calculator {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #display {
+            width: 100%;
+            height: 60px;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 6px;
+            background-color: #fcf1fd;
+            text-align: right;
+            margin-bottom: 16px;
+            font-size: 25px;
+        }
+        .box-bottons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        button {
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            background-color: #f4efef;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #d0d0d0;
+        }
+        .btn-igual {
+            grid-column: span 2;
+            background-color: #e3c3e7;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <div class="calculator">
+        <input type="text" disabled id="display"/>
+        <div class="box-bottons">
+            <button onclick="insertToDisplay('/')">%</button>
+            <button onclick="clean()">DEL</button>
+            <button onclick="back()">C</button>
+            <button onclick="insertToDisplay('/')">/</button>
+            <button onclick="insertToDisplay('7')">7</button>
+            <button onclick="insertToDisplay('8')">8</button>
+            <button onclick="insertToDisplay('9')">9</button>
+            <button onclick="insertToDisplay('*')">*</button>
+            <button onclick="insertToDisplay('4')">4</button>
+            <button onclick="insertToDisplay('5')">5</button>
+            <button onclick="insertToDisplay('6')">6</button>
+            <button onclick="insertToDisplay('-')">-</button>
+            <button onclick="insertToDisplay('1')">1</button>
+            <button onclick="insertToDisplay('2')">2</button>
+            <button onclick="insertToDisplay('3')">3</button>
+            <button onclick="insertToDisplay('+')">+</button>
+            <button onclick="insertToDisplay('0')">0</button>
+            <button onclick="insertToDisplay(',')">,</button>
+            <button class="btn-igual" onclick="calculate()">=</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
