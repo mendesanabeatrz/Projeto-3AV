@@ -84,4 +84,3 @@ document.addEventListener("keydown", e => {
     if (t === "z") zerar();
     if (t === "m") registrarMarcacao(); 
 });
-
