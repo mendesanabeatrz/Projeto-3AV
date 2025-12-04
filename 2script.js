@@ -62,7 +62,7 @@ function registrarMarcacao() {
     marcacoes.appendChild(p); 
 }
 
-// Botão Iniciar ↔ Pausar
+// Botão Iniciar Pausar
 btnIniciar.addEventListener("click", () => {    
     if (!rodando) { // se não estiver rodando
         iniciar();
@@ -84,3 +84,4 @@ document.addEventListener("keydown", e => {
     if (t === "z") zerar();
     if (t === "m") registrarMarcacao(); 
 });
+
